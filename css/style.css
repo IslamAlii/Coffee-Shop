@@ -22,6 +22,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
 }
 
 h1,
@@ -108,6 +109,13 @@ a {
   font-size: 20px;
   display: block;
   margin: 0.5rem 0;
+}
+
+.menu,
+.products,
+.best-coffee,
+.blog {
+  background-color: transparent;
 }
 
 /* --------------------------- Navbar Styles -------------------------------------------------*/
