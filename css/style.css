@@ -18,8 +18,10 @@ body {
   font-size: 15px;
   font-weight: 300;
   line-height: 1.8;
-  background: url(../images/xbg_4.jpg.pagespeed.ic.jZaRfvTz2Z.webp) no-repeat
-    fixed;
+  background: url(../images/xbg_4.jpg.pagespeed.ic.jZaRfvTz2Z.webp);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 h1,
@@ -262,6 +264,7 @@ header main .btn:last-of-type:hover {
 .about {
   display: grid;
   grid-template-columns: repeat(2, 50%);
+  margin: 0;
 }
 
 .about > div {
@@ -288,6 +291,7 @@ header main .btn:last-of-type:hover {
   height: 70vh;
   color: black;
   background-color: #c49b63;
+  margin: 0;
 }
 
 .services .container {
