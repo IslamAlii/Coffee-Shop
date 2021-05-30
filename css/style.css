@@ -188,11 +188,24 @@ header nav .cart {
   top: 50%;
   right: 7%;
   transform: translateY(-50%);
-  transition: color 0.3s ease-in-out;
 }
 
-header nav .cart:hover {
-  color: var(--primary-color);
+header nav .cart .cart-container {
+  position: relative;
+}
+
+header nav .cart .cart-container .number {
+  width: 25px;
+  height: 25px;
+  background-color: #f8b500;
+  display: inline-block;
+  border-radius: 50%;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  position: absolute;
+  top: -8px;
+  right: -80%;
 }
 
 /* -------------------------- Main section styles ---------------------------------------------- */
@@ -406,50 +419,70 @@ header main .btn:last-of-type:hover {
   font-weight: 400;
 }
 
-/* ------------------------------------- Best Coffee & Products Section -------------------------------- */
-.best-coffee,
-.products {
+/* ------------------------------------- Products, Best Coffe & Blog Section -------------------------------- */
+.products,
+.best-coffee {
   padding: 5rem 0;
 }
 
+.products .container:first-of-type,
 .best-coffee .container:first-of-type,
-.products .container:first-of-type {
+.blog .container:first-of-type {
   text-align: center;
   margin-bottom: 3rem;
 }
 
+.products .items,
 .best-coffee .container:last-of-type,
-.products .items {
+.blog .container:last-of-type {
   display: grid;
   justify-content: space-between;
   align-items: center;
   text-align: center;
 }
 
+.blog .container:last-of-type {
+  text-align: left;
+}
+
+.blog .container:last-of-type .comments {
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: 0.3s ease-in-out;
+}
+
+.blog .container:last-of-type .comments:hover {
+  color: #bfbfbf;
+}
+
 .best-coffee .container:last-of-type {
   grid-template-columns: repeat(4, 23%);
 }
 
-.products .items {
+.products .items,
+.blog .container:last-of-type {
   grid-template-columns: repeat(3, 30%);
 }
 
+.products .items > div,
 .best-coffee .container:last-of-type > div,
-.products .items > div {
+.blog .container:last-of-type > div {
   margin-bottom: 2rem;
 }
 
+.products .items img,
 .best-coffee .container:last-of-type img,
-.products .items img {
+.blog .container:last-of-type img {
   width: 100%;
 }
 
-.products .items img {
+.products .items img,
+.blog .container:last-of-type img {
   height: 350px;
 }
 
-.best-coffee .container:last-of-type .btn,
-.products .items .btn {
+.products .items .btn,
+.best-coffee .container:last-of-type .btn {
   font-size: 13px;
   padding: 0.5rem 1rem;
 }
@@ -513,6 +546,84 @@ header main .btn:last-of-type:hover {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+}
+
+/* -------------------------------- Footer Section -------------------------------------------- */
+footer {
+  color: rgba(255, 255, 255, 0.7);
+  background-color: #120f0f;
+  padding: 3rem 0;
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: 30% 20% 30%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+footer .container > div {
+  margin-bottom: 3rem;
+}
+
+footer .container h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+
+footer .container > div:first-of-type p {
+  margin-bottom: 2rem;
+}
+
+footer .container > div:first-of-type .social i {
+  font-size: 35px;
+  color: white;
+  margin-right: 0.5rem;
+  transition: 0.3s ease-in-out;
+}
+
+footer .container > div:first-of-type .social i:hover {
+  color: var(--primary-color);
+}
+
+footer .container > div:nth-of-type(2) ul li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+footer .container > div:nth-of-type(2) ul li a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: 0.3s ease-in-out;
+}
+
+footer .container > div:nth-of-type(2) ul li a:hover {
+  color: var(--primary-color);
+}
+
+footer .container > div:last-of-type .quest {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+footer .container > div:last-of-type .quest i {
+  font-size: 20px;
+}
+
+footer .copy-rights {
+  text-align: center;
+  margin: 0 5%;
+}
+
+footer p span {
+  color: var(--primary-color);
 }
 
 /* ----------------------------- Responsive styles -------------------------------- */
@@ -598,11 +709,13 @@ header main .btn:last-of-type:hover {
     margin: -0.2rem 0;
   }
 
-  .products .items img {
+  .products .items img,
+  .blog .container:last-of-type img {
     height: 250px;
   }
 
-  .best-coffee .container:last-of-type {
+  .best-coffee .container:last-of-type,
+  .blog .container:last-of-type {
     grid-template-columns: repeat(2, 47%);
   }
 
@@ -613,6 +726,10 @@ header main .btn:last-of-type:hover {
 
 /* ----------------------------------------------------------------------------------------------------*/
 @media (max-width: 768px) {
+  .inner-heading {
+    margin: 0;
+  }
+
   header main h1 {
     font-size: 30px;
   }
@@ -638,21 +755,45 @@ header main .btn:last-of-type:hover {
     margin-bottom: 3rem;
   }
 
+  .products .container:first-of-type p br,
+  .best-coffee .container:first-of-type p br,
+  .blog .container:first-of-type p br {
+    display: none;
+  }
+
   .best-coffee .container:last-of-type,
-  .products .items {
+  .products .items,
+  .blog .container:last-of-type {
     grid-template-columns: 100%;
   }
 
-  .products .items img {
+  .products .items img,
+  .blog .container:last-of-type img {
     height: 350px;
   }
 
   .products .container:nth-of-type(2) > div .btn {
     display: block;
   }
-  .products .container:first-of-type p br,
-  .best-coffee .container:first-of-type p br {
-    display: none;
+
+  footer .container {
+    grid-template-columns: 100%;
+  }
+
+  footer .container h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  footer .container > div:first-of-type p {
+    margin-bottom: 1rem;
+  }
+
+  footer .container > div:nth-of-type(2) ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  footer .container > div:last-of-type .quest {
+    margin-bottom: 0.5rem;
   }
 }
 
