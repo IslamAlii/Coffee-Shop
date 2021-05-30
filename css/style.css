@@ -1,0 +1,661 @@
+/* -------------------------- Global Styles --------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #c49b63;
+}
+
+body {
+  height: 5000px;
+  color: gray;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+  background: url(../images/xbg_4.jpg.pagespeed.ic.jZaRfvTz2Z.webp) no-repeat
+    fixed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Josefin Sans", Arial, sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  color: var(--primary-color);
+  font-size: 13px;
+  padding: 1rem 2rem;
+  background: transparent;
+  border: 1px solid var(--primary-color);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.btn-primary {
+  color: black;
+  background: var(--primary-color);
+}
+
+.btn-primary:hover {
+  color: var(--primary-color);
+  background-color: transparent;
+}
+
+.subheading {
+  font-family: "Great Vibes", cursive;
+  font-size: 50px;
+  color: var(--primary-color);
+}
+
+.section-heading {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.inner-heading {
+  margin: 0.5rem 0;
+}
+
+.inner-heading a {
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.inner-heading a:hover {
+  color: var(--primary-color);
+}
+
+.price {
+  color: #fff;
+  font-size: 20px;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+/* --------------------------- Navbar Styles -------------------------------------------------*/
+header nav {
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 0;
+  position: fixed;
+  z-index: 999;
+  transition: 0.3s ease-in-out;
+}
+
+header nav.scroll {
+  background-color: #151111;
+  border-bottom: 0;
+  padding: 1rem 0;
+}
+
+header nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav .container .logo a {
+  color: white;
+  font-size: 22px;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
+
+header nav .container .logo a:hover {
+  color: var(--primary-color);
+}
+
+header nav .container .logo a small {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  display: block;
+  letter-spacing: 5px;
+  margin-top: -0.5rem;
+}
+
+header nav .container ul {
+  margin-right: 5rem;
+}
+
+header nav .container ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+header nav .container ul li a {
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+header nav .container ul li a:hover,
+header nav .container ul li a.active {
+  color: var(--primary-color);
+}
+
+header nav .container .btn-nav {
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+header nav .cart {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 7%;
+  transform: translateY(-50%);
+  transition: color 0.3s ease-in-out;
+}
+
+header nav .cart:hover {
+  color: var(--primary-color);
+}
+
+/* -------------------------- Main section styles ---------------------------------------------- */
+header main {
+  height: 100vh;
+  background-image: url(../images/xbg_3.jpg.pagespeed.ic.vezfjy4tUK.webp);
+  background-size: cover;
+  position: relative;
+}
+
+header main .container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 55;
+  text-align: center;
+}
+
+header main h1 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+header main h1 br {
+  display: none;
+}
+
+header main p {
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+}
+
+header main .btn:last-of-type {
+  color: white;
+  border: 1px solid white;
+}
+
+header main .btn:last-of-type:hover {
+  color: black;
+  border: 1px solid var(--primary-color);
+}
+
+/* --------------------------- About section ------------------------------*/
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+
+.about > div {
+  height: 100vh;
+}
+
+.about > div img {
+  width: 100%;
+  height: 100%;
+}
+
+.about > div .text {
+  width: 80%;
+  height: 70%;
+  margin-top: 50%;
+  margin-left: -5rem;
+  padding: 3rem;
+  background: rgba(0, 0, 0, 0.5);
+  transform: translateY(-50%);
+}
+
+/* -------------------------------------- services Section -------------------------------------------*/
+.services {
+  height: 70vh;
+  color: black;
+  background-color: #c49b63;
+}
+
+.services .container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.services .container > div {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.services .container > div i {
+  font-size: 50px;
+  color: #1d150b;
+  z-index: 1;
+  border: 1px solid #674c27;
+  padding: 1.5rem;
+}
+
+.services .container > div h3 {
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+
+/* ----------------------------- Menu section ----------------------------------------------------- */
+.menu {
+  padding: 5rem 0 2rem 0;
+}
+
+.menu .container {
+  display: grid;
+  grid-template-columns: repeat(2, 47%);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu .container > div:first-of-type {
+  text-align: right;
+}
+
+.menu .container > div:first-of-type p {
+  margin-bottom: 3rem;
+}
+
+.menu .container > div:last-of-type {
+  display: grid;
+  grid-template-columns: repeat(2, 48%);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu .container > div img {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.menu .container > div img:nth-of-type(2),
+.menu .container > div img:last-of-type {
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
+/* ---------------------------------- Numbers section ------------------------------------------------ */
+.numbers {
+  height: 50vh;
+  background: url(../images/xbg_2.jpg.pagespeed.ic.MyjXZaMk8H.webp);
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.numbers .container {
+  height: 100%;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 20%);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.numbers .container > div {
+  text-align: center;
+  z-index: 55;
+}
+
+.numbers .container > div span:first-of-type {
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--primary-color);
+  display: inline-block;
+  transition: 0.3s ease-in-out;
+}
+
+.numbers .container > div:hover span:first-of-type {
+  background-color: var(--primary-color);
+  transform: rotate(45deg);
+}
+
+.numbers .container > div i {
+  color: var(--primary-color);
+  font-size: 40px;
+  margin-top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s ease-in-out;
+}
+
+.numbers .container > div:hover span:first-of-type i {
+  color: black;
+}
+
+.numbers .container > div strong {
+  display: block;
+  margin: 1rem 0;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.numbers .container > div span:last-of-type {
+  color: #bfbfbf;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* ------------------------------------- Best Coffee & Products Section -------------------------------- */
+.best-coffee,
+.products {
+  padding: 5rem 0;
+}
+
+.best-coffee .container:first-of-type,
+.products .container:first-of-type {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.best-coffee .container:last-of-type,
+.products .items {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.best-coffee .container:last-of-type {
+  grid-template-columns: repeat(4, 23%);
+}
+
+.products .items {
+  grid-template-columns: repeat(3, 30%);
+}
+
+.best-coffee .container:last-of-type > div,
+.products .items > div {
+  margin-bottom: 2rem;
+}
+
+.best-coffee .container:last-of-type img,
+.products .items img {
+  width: 100%;
+}
+
+.products .items img {
+  height: 350px;
+}
+
+.best-coffee .container:last-of-type .btn,
+.products .items .btn {
+  font-size: 13px;
+  padding: 0.5rem 1rem;
+}
+
+.products .container:nth-of-type(2) > div {
+  text-align: center;
+  margin: 7rem 0 5rem;
+}
+
+.products .container:nth-of-type(2) > div .btn {
+  font-size: 18px;
+  font-weight: 400;
+  margin-right: 1rem;
+  border: 0;
+  border-bottom: 1px solid var(--primary-color);
+  padding: 1rem;
+}
+
+.products .items.hidden {
+  display: none;
+}
+
+/* ---------------------------------------------- Testimonials Section Styles ------------------------- */
+.testimonials {
+  background-image: url(../images/xbg_1.jpg.pagespeed.ic.q3FmqSxDIf.webp);
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 5rem;
+}
+
+.testimonials .container:first-of-type {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.testimonials .container:last-of-type {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  align-items: flex-end;
+}
+
+.testimonials .container:last-of-type > div {
+  color: white;
+  background-color: var(--primary-color);
+  padding: 1.5rem;
+}
+
+.testimonials .container:last-of-type > div:nth-of-type(2),
+.testimonials .container:last-of-type > div:nth-of-type(4) {
+  background-color: #b18c59;
+}
+
+.testimonials .container:last-of-type > div .profile {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  margin-top: 1rem;
+}
+
+.testimonials .container:last-of-type > div .profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* ----------------------------- Responsive styles -------------------------------- */
+@media (max-width: 992px) {
+  header nav .container .logo {
+    z-index: 55;
+  }
+
+  header nav .container ul {
+    width: 100%;
+    height: 0;
+    background-color: #151111;
+    padding: 0 5%;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    transition: height 0.5s ease-in-out, padding 0.5s ease-in-out;
+  }
+
+  header nav .container ul.active {
+    padding: 7rem 5%;
+    height: 70vh;
+  }
+
+  header nav .container ul li {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  header nav .container .btn-nav {
+    display: block;
+    z-index: 55;
+  }
+
+  header nav .cart {
+    left: 5%;
+    top: 60vh;
+  }
+
+  header main h1 {
+    font-size: 30px;
+  }
+
+  .about {
+    grid-template-columns: 100%;
+  }
+
+  .about > div {
+    height: auto;
+  }
+
+  .about > div .text {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 3rem;
+    transform: translateY(0);
+  }
+
+  .menu .container {
+    grid-template-columns: 100%;
+  }
+
+  .menu .container > div:first-of-type {
+    text-align: left;
+    margin-bottom: 3rem;
+  }
+
+  .numbers {
+    height: auto;
+    padding: 3rem 0;
+  }
+
+  .numbers .container {
+    grid-template-columns: repeat(2, 45%);
+  }
+
+  .numbers .container > div {
+    margin-bottom: 3rem;
+  }
+
+  .numbers .container > div strong {
+    margin: -0.2rem 0;
+  }
+
+  .products .items img {
+    height: 250px;
+  }
+
+  .best-coffee .container:last-of-type {
+    grid-template-columns: repeat(2, 47%);
+  }
+
+  .testimonials .container:last-of-type {
+    grid-template-columns: 100%;
+  }
+}
+
+/* ----------------------------------------------------------------------------------------------------*/
+@media (max-width: 768px) {
+  header main h1 {
+    font-size: 30px;
+  }
+
+  header main h1 br {
+    display: block;
+  }
+
+  header main p br {
+    display: none;
+  }
+
+  .services {
+    height: auto;
+    padding: 3rem 0;
+  }
+
+  .services .container {
+    grid-template-columns: 100%;
+  }
+
+  .menu .container > div {
+    margin-bottom: 3rem;
+  }
+
+  .best-coffee .container:last-of-type,
+  .products .items {
+    grid-template-columns: 100%;
+  }
+
+  .products .items img {
+    height: 350px;
+  }
+
+  .products .container:nth-of-type(2) > div .btn {
+    display: block;
+  }
+  .products .container:first-of-type p br,
+  .best-coffee .container:first-of-type p br {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------------------------------*/
+@media (max-width: 576px) {
+}
